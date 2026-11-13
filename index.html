@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agente com Memória</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="model-name">Agente com Memória <span class="version">2.0</span></span>
+    <button id="nova" type="button" class="btn-nova" title="Iniciar nova conversa">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      Nova conversa
+    </button>
+  </header>
+
+  <main id="chat" aria-live="polite">
+    <div id="welcome" class="welcome-screen">
+      <h2>Como posso ajudar hoje?</h2>
+      <p>Suas conversas ficam salvas automaticamente.</p>
+    </div>
+  </main>
+
+  <footer class="input-area">
+    <form id="form">
+      <input id="pergunta" aria-label="Sua mensagem" placeholder="Envie uma mensagem para o Agente..." autocomplete="off" required>
+      <button id="enviar" type="submit" aria-label="Enviar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </button>
+    </form>
+    <p class="disclaimer">O agente pode cometer erros. Verifique informações importantes.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
